@@ -1,13 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.smartmobility;
 
-/**
- *
- * @author A s u s
- */
-public class Admin {
-    
+public class Admin extends Pengguna {
+
+    public Admin(int idPengguna, String nama, String email,
+                 String password, String role) {
+        super(idPengguna, nama, email, password, role);
+    }
+
+    public void kelolaLaporan() {
+        System.out.println("Admin dapat mengelola laporan.");
+    }
+
+    public void verifikasiLaporan() {
+        System.out.println("Admin melakukan verifikasi laporan.");
+    }
+
+    public void tampilkanProfil() {
+        System.out.println("ID Admin: " + getIdPengguna());
+        System.out.println("Nama: " + getNama());
+        System.out.println("Email: " + getEmail());
+        System.out.println("Role: " + getRole());
+    }
 }
